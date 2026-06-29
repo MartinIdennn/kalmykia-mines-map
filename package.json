@@ -1,0 +1,16 @@
+{
+  "name": "kalmykia-mines-map",
+  "version": "1.0.0",
+  "description": "Сайт-карта рудников Калмыкии: интерактивная карта с донатами (прототип)",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "seed": "node server/seed.js",
+    "export": "node server/export-static.js",
+    "build": "node server/seed.js && node server/export-static.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "express": "^4.19.2"
+  }
+}
