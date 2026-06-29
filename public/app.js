@@ -82,6 +82,11 @@ function mergedDonors(mine) {
 
 const map = L.map('map', { minZoom: 6, maxZoom: 14 }).setView([46.3, 45.0], 7);
 
+// Префикс атрибуции без украинского флага (Leaflet 1.8+ добавляет его по умолчанию)
+map.attributionControl.setPrefix(
+  '<a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a>'
+);
+
 // Базовые слои: «Схема» (CartoDB Voyager — чистая карта без меток ООПТ) и
 // «Спутник» (Esri World Imagery). Переключаются контролом справа сверху.
 const baseSchema = L.tileLayer(
